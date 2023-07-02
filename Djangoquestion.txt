@@ -1,0 +1,51 @@
+1.Why Django should be used for web-development? Explain how you
+can create a project in Django? 
+
+Django is a web framework which is design under python programming language.We can use to develop high level web application. 
+To create a project in Django, we need to follow several steps:
+1. We need to create a virtual environment
+2. Go inside the environment
+3.activate the environment
+4.install specific framework
+5. create project
+6. create application
+
+2. How to check installed version of django?
+ using command line:python3 -m django --version
+
+Explain what does django-admin.py make messages command is used
+for? 
+It runs over the entire source tree of the current directory and pulls out all strings marked for translation. It creates (or updates) a message file in the conf/locale (in the Django tree) or locale (for project and application) directory.
+
+What is Django URLs?make program to create django urls
+
+In Django, views are python functions that takes a url request as a parameter and returns HTTP response and each view needs to be mapped to a corresponding url pattern.
+
+from django.contrib import admin
+from django.urls import path, include
+  
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('blog.urls')),
+]
+
+What is a QuerySet?Write program to create a new Post object in
+database: 
+
+A query set represents a collection of objects from your database. 
+This is how to create a models:
+
+from django.db import models
+
+class blog(models.Model):
+    name=models.CharField(max_length=100)
+    tagline=models.TextField()
+
+
+
+Mention what command line can be used to load data into Django? 
+
+django-admin loaddata author
+ author=> it searches and load the contents of the named author
+
+
